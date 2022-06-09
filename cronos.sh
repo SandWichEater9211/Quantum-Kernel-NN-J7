@@ -18,13 +18,13 @@
 
 # Directory Contol
 CR_DIR=$(pwd)
-CR_TC=/home/prashantp01/UBERTC-aarch64-linux-android-6.0/bin/aarch64-linux-android-
+CR_TC=/home/moin/Downloads/gcc-linaro-4.9.4-2017.01-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
 CR_DTS=arch/arm64/boot/dts
-CR_DTB=$CR_DIR/boot.img-dtb
+CR_DTB=$CR_DIR/boot.img-dt
 # Kernel Variables
-CR_VERSION=V1.0
-CR_NAME=Quantum_Kernel
-CR_JOBS=5
+CR_VERSION=V2.0
+CR_NAME=QuantumKernel
+CR_JOBS=$((`nproc`-1))
 CR_ARCH=arm64
 CR_DATE=$(date +%Y%m%d)
 # Init build
@@ -35,7 +35,7 @@ export $CR_ARCH
 ##########################################
 # Device specific Variables [SM-J700x]
 CR_DTSFILES_J700X="exynos7580-j7elte_rev00.dtb exynos7580-j7elte_rev04.dtb exynos7580-j7elte_rev06.dtb"
-CR_CONFG_J700X=j7eltetmo_00_defconfig
+CR_CONFG_J700X=quantum_defconfig
 CR_VARIANT_J700X=J700x
 ##########################################
 
